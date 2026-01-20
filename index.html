@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Все типы полей ввода (на русском)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        label {
+            display: block;
+            margin-top: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .checkbox-group,
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 6px;
+        }
+
+        .checkbox-group label,
+        .radio-group label {
+            font-weight: normal;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin: 0;
+        }
+
+        h1 {
+            color: #222;
+        }
+
+        button {
+            background-color: #f0f0f0;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Все типы полей ввода (русский интерфейс)</h1>
+
+    <label for="text">Текстовое поле</label>
+    <input type="text" id="text" placeholder="Введите текст">
+
+    <label for="email">Электронная почта</label>
+    <input type="email" id="email" placeholder="example@example.com">
+
+    <label for="password">Пароль</label>
+    <input type="password" id="password" placeholder="••••••••">
+
+    <label for="number">Число</label>
+    <input type="number" id="number" min="0" max="100" placeholder="От 0 до 100">
+
+    <label for="tel">Телефон</label>
+    <input type="tel" id="tel" placeholder="+7 (999) 123-45-67">
+
+    <label for="url">Веб-адрес (URL)</label>
+    <input type="url" id="url" placeholder="https://example.com">
+
+    <label for="search">Поиск</label>
+    <input type="search" id="search" placeholder="Что ищете?">
+
+    <label for="color">Цвет</label>
+    <input type="color" id="color" value="#3366ff">
+
+    <label for="date">Дата</label>
+    <input type="date" id="date">
+
+    <label for="datetime-local">Дата и время</label>
+    <input type="datetime-local" id="datetime-local">
+
+    <label for="time">Время</label>
+    <input type="time" id="time">
+
+    <label for="month">Месяц</label>
+    <input type="month" id="month">
+
+    <label for="week">Неделя</label>
+    <input type="week" id="week">
+
+    <label for="range">Ползунок (диапазон)</label>
+    <input type="range" id="range" min="0" max="100" value="50">
+
+    <label for="file">Файл</label>
+    <input type="file" id="file" accept=".pdf,.doc,.jpg">
+
+    <!-- Скрытое поле не отображается -->
+    <input type="hidden" id="hidden" value="скрытое_значение">
+
+    <label>Флажки (множественный выбор)</label>
+    <div class="checkbox-group">
+        <label><input type="checkbox" name="interest" value="1"> Спорт</label>
+        <label><input type="checkbox" name="interest" value="2"> Музыка</label>
+        <label><input type="checkbox" name="interest" value="3"> Путешествия</label>
+    </div>
+
+    <label>Переключатели (один выбор)</label>
+    <div class="radio-group">
+        <label><input type="radio" name="gender" value="male"> Мужской</label>
+        <label><input type="radio" name="gender" value="female"> Женский</label>
+        <label><input type="radio" name="gender" value="other"> Другой</label>
+    </div>
+
+    <label for="textarea">Комментарий</label>
+    <textarea id="textarea" rows="4" placeholder="Напишите ваш комментарий..."></textarea>
+
+    <label for="select">Выберите страну</label>
+    <select id="select">
+        <option value="">— Выберите —</option>
+        <option value="ru">Россия</option>
+        <option value="by">Беларусь</option>
+        <option value="kz">Казахстан</option>
+    </select>
+
+    <label for="datalist-example">Браузер (с подсказками)</label>
+    <input list="browsers" id="datalist-example" placeholder="Начните ввод...">
+    <datalist id="browsers">
+        <option value="Chrome">
+        <option value="Firefox">
+        <option value="Safari">
+        <option value="Edge">
+        <option value="Opera">
+    </datalist>
+
+    <button type="button">Обычная кнопка</button>
+    <button type="submit">Отправить</button>
+    <button type="reset">Сбросить</button>
+
+</body>
+
+</html>
